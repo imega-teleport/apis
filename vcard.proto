@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package vcard;
+
+message VCard {
+    Url url = 1;
+    birth_date = 2;
+    oneof photo {
+        Url url = 1;
+        string text = 11;
+    };
+}
